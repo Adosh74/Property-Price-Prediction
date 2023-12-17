@@ -72,11 +72,64 @@
             transition-duration: 0.4s;
             box-shadow: 0 2px #999;
         }
+        /*  make a pretty css for table dev */
+        .table {
+            margin: 0 auto;
+            width: 50%;
+            border: 1px solid #000000;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 18px;
+            table-layout: fixed;
+            background-color: #ffffff;
+        }
+        .table th {
+            border: 1px solid #000000;
+            padding: 5px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .table td {
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+        .table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .table tr:hover {
+            background-color: #ddd;
+        }
+        /* make a pretty css for table dev */
+
+
+        
         
     </style>
     
 </head>
 <body>
+    <div class="table">     
+        <table>
+            <tr>
+                <th>Area Income</th>
+                <th>Area House Age</th>
+                <th>Area Number of Rooms</th>
+                <th>Area Number of Bedrooms</th>
+                <th>Area Population</th>
+            </tr>
+            <tr>
+                <td>18K to 108K</td>
+                <td>2 to 10</td>
+                <td>3 to 10</td>
+                <td>2 to 7</td>
+                <td>172 to 7K</td>
+            </tr>
+        </table>
+
+
+    </div>
+
+
     <h1>Prediction Page</h1>
 
     <form action="result">
