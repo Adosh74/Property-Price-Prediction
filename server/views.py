@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import os
 # ML model packages
 import pandas as pd
 import numpy as np
@@ -17,7 +17,13 @@ def predict(request):
     return render(request, 'predict.html')
 
 def result(request):
-    data = pd.read_csv(r"USA_Housing.csv")
+
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data = pd.read_csv(os.getcwd() + "\\" + "server" + "\\" +  "USA_Housing.csv")
+    
+    # get the working directory path
+
+    
 
     data = data.drop(['Address'], axis=1)
 
