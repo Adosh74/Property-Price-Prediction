@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price</title>
+    <!-- create a pretty css for this page and the button in the top and price with a pretty color and pretty background -->
+    <style>
+        body {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            color: #000000;
+            
+        }
+        input[type=button] {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            box-shadow: 0 2px #999;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #000000;
+            border-radius: 4px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .com-sm-4 {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+    
+    </style>
+</head>
+<body>
+    <!--  create button to home page and button to predict page -->
+    <div>
+        <!--  on click home redirect to http://127.0.0.1:8000/home -->
+        <input type="button" value="Home" onclick="window.location.href='/'">
+        <input type="button" value="Predict again" onclick="window.location.href='/predict'">
+    </div>
+    <h2>{{result2}}</h2>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            color: #000000;
+            
+        }
+        input[type=button] {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            box-shadow: 0 2px #999;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Price Property Prediction</h1>
+        <form>
+            <input type="button" value="Predict" onclick="window.location.href='predict'">
+        </form>
+    </div>
+</body>
+</html>

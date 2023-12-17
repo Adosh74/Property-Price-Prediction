@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <!-- make a pretty css for all this page -->
+    <style>
+        body {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h1 {
+            color: #000000;
+            
+        }
+        input[type=button] {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            box-shadow: 0 2px #999;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #000000;
+            border-radius: 4px;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .com-sm-4 {
+            flex: 33.33%;
+            padding: 5px;
+        }
+        
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            color: #000000;
+        }
+        /* make predict button more pretty */
+        input[type=submit] {
+            background-color: #000000;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 8px;
+            transition-duration: 0.4s;
+            box-shadow: 0 2px #999;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1>Prediction Page</h1>
+
+    <form action="result">
+        <div class="row">
+            <div class="com-sm-4">
+                <p>Avg Area Income</p>
+                <input type="text" name="n1">
+            </div>
+            <div class="com-sm-4">
+                <p>Avg Area House Age</p>
+                <input type="text" name="n2">
+            </div>
+            <div class="com-sm-4">
+                <p>Avg Area Number of Rooms</p>
+                <input type="text" name="n3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="com-sm-4">
+                <p>Avg Area Number of Bedrooms</p>
+                <input type="text" name="n4">
+            </div>
+            <div class="com-sm-4">
+                <p>Area Population</p>
+                <input type="text" name="n5">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="PREDICT">
+        </div>
+    </form>
+    <div class="row">
+        <h2>{{result2}}</h2>
+    </div>
+
+</body>
+</html>
