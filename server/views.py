@@ -18,32 +18,39 @@ def predict(request):
 
 def result(request):
 
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    # for production
-    data = pd.read_csv(os.getcwd() + "/" + "server" + "/" +  "USA_Housing.csv")
-    
-    # get the working directory path
+    # try error exeption to prevent the error 
+    try: 
 
-    
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        # for production
+        data = pd.read_csv(os.getcwd() + "/" + "server" + "/" +  "USA_Housing.csv")
+        
+        # get the working directory path
 
-    data = data.drop(['Address'], axis=1)
+        
 
-    X = data.drop('Price', axis = 1)
-    Y = data['Price']
-    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = .30)
+        data = data.drop(['Address'], axis=1)
 
-    model = LinearRegression()
-    model.fit(X_train, Y_train)
+        X = data.drop('Price', axis = 1)
+        Y = data['Price']
+        X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = .30)
 
-    value1 = float(request.GET['n1'])
-    value2 = float(request.GET['n2'])
-    value3 = float(request.GET['n3'])
-    value4 = float(request.GET['n4'])
-    value5 = float(request.GET['n5'])
+        model = LinearRegression()
+        model.fit(X_train, Y_train)
 
-    prediction = model.predict(np.array([value1, value2, value3, value4, value5]).reshape(1, -1))
-    prediction = round(prediction[0])
+        value1 = float(request.GET['n1'])
+        value2 = float(request.GET['n2'])
+        value3 = float(request.GET['n3'])
+        value4 = float(request.GET['n4'])
+        value5 = float(request.GET['n5'])
 
-    price = "The price of the house is: " + str(prediction) + "$"
+        prediction = model.predict(np.array([value1, value2, value3, value4, value5]).reshape(1, -1))
+        prediction = round(prediction[0])
 
-    return render(request, 'result.html', {'result2': price})
+        price = "The price of the house is: " + str(prediction) + "$"
+        if(prediction > 0):
+            return render(request, 'result.html', {'result2': price})
+        return render(request, 'result.html', {'result2': 'use valid input'})
+    except: 
+        price = "use valid input"
+        return render(request, 'result.html', {'result2': price})
