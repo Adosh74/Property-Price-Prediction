@@ -19,7 +19,8 @@ def predict(request):
 def result(request):
 
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    data = pd.read_csv(os.getcwd() + "\\" + "server" + "\\" +  "USA_Housing.csv")
+    # for production
+    data = pd.read_csv(os.getcwd() + "/" + "server" + "/" +  "USA_Housing.csv")
     
     # get the working directory path
 
