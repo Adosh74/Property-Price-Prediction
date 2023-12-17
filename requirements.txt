@@ -1,4 +1,5 @@
-Django==5.0.
+Django==5.0
+gunicorn==21.2.0
 numpy==1.26.2
 pandas==2.1.4
 matplotlib==3.8.2
