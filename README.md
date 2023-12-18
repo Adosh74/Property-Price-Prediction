@@ -9,7 +9,7 @@
 8. [About the Author](#about-the-author)
 
 ## Description
-This is a project to predict the price of a house based on the features of the house. The dataset used is the **USA_Housing** dataset which is available in the sklearn library. The dataset contains 50000 rows and 7 columns. The columns are as follows:
+This is a project to predict the price of a house based on the features of the house. The dataset used is the **USA_Housing** dataset which is available in the kaggle. The dataset contains 50000 rows and 7 columns. The columns are as follows:
 
 1. Avg. Area Income
 2. Avg. Area House Age
