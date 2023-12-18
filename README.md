@@ -5,7 +5,8 @@
 4. [How to install and run the project](#how-to-install-and-run-the-project)
 5. [How to use the project](#how-to-use-the-project)
 6. [About the Model](#about-the-model)
-7. [About the Author](#about-the-author)
+7. [Screenshots](#screenshots)
+8. [About the Author](#about-the-author)
 
 ## Description
 This is a project to predict the price of a house based on the features of the house. The dataset used is the **USA_Housing** dataset which is available in the sklearn library. The dataset contains 50000 rows and 7 columns. The columns are as follows:
@@ -57,6 +58,14 @@ if you use linux comment line 28 in [views.py](/server/views.py) and uncomment l
 - The model is trained with 70% of the data and tested with 30% of the data
 - The accuracy of the model is 91.9%
 - [Model Code](/model/Final-Model.ipynb)
+
+# Screenshots
+- **Home Page**
+![Screenshot 1](/public/Home.jpg)
+- **Predict Page**
+![Screenshot 2](/public/Prediction_Page.jpg)
+- **Result Page**
+![Screenshot 3](/public/Result_Page.jpg)
 
 ## About the Author
 - Name: **Mohamed Shebl**
