@@ -7,7 +7,7 @@
 6. [About the Model](#about-the-model)
 7. [About the Author](#about-the-author)
 
-## description
+## Description
 This is a project to predict the price of a house based on the features of the house. The dataset used is the Boston Housing dataset which is available in the sklearn library. The dataset contains 50000 rows and 7 columns. The columns are as follows:
 
 1. Avg. Area Income
@@ -27,7 +27,7 @@ The algorithm used is the Linear Regression algorithm. The algorithm is implemen
 
 
 ## Server
-The server is implemented using Django. The server is hosted on Heroku. The link to the server is: https://price-prediction-3l6g.onrender.com/
+The server is implemented using Django. The server is hosted on Render. The link to the server is: https://price-prediction-3l6g.onrender.com/
 
 - The server is hosted on Render.com
 
