@@ -18,12 +18,14 @@ def predict(request):
 
 def result(request):
 
-    # try error exeption to prevent the error 
     try: 
 
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        # for production
-        data = pd.read_csv(os.getcwd() + "/" + "server" + "/" +  "USA_Housing.csv")
+        # for production (linux)
+        # data = pd.read_csv(os.getcwd() + "/" + "server" + "/" +  "USA_Housing.csv")
+
+        # for development (windows)
+        data = pd.read_csv(os.getcwd() + "\\" + "server" + "\\" +  "USA_Housing.csv")
         
         # get the working directory path
 
@@ -33,7 +35,7 @@ def result(request):
 
         X = data.drop('Price', axis = 1)
         Y = data['Price']
-        X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = .30)
+        X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = .30, random_state=123)
 
         model = LinearRegression()
         model.fit(X_train, Y_train)
